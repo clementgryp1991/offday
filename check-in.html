@@ -1,0 +1,17 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><title>check-in · offday</title></head><body><div id="hdr"></div>
+<section class="ci-hero"><h1>check-in</h1><p>bijna klaar voor je offday.</p></section>
+<div class="cart"><div class="panel"><h2>jouw kamer</h2><p id="cnt"></p><div id="lines"></div>
+ <div class="gift"><div class="t"><h3 id="gift-t"></h3><p id="gift-p"></p><div class="bar"><i></i></div><div class="bar-l"><span id="bar-now"></span><span data-drempel></span></div></div><img src="img/sleutel-hand.jpg" alt="room 00-sleutel"></div>
+ <h3 style="font-size:22px;margin-top:22px">misschien ook iets voor je kamer?</h3>
+ <div class="ups">
+  <div class="up"><img src="img/lijn.jpg" alt=""><div><h4>reset mist</h4><span data-price="reset-mist"></span><br><button class="btn sm" data-add="reset-mist">toevoegen →</button></div></div>
+  <div class="up"><img src="img/plank.jpg" alt=""><div><h4>radiance serum</h4><span data-price="radiance-serum"></span><br><button class="btn sm" data-add="radiance-serum">toevoegen →</button></div></div>
+  <div class="up"><img src="img/koffer.jpg" alt=""><div><h4>late check-out kit</h4><span data-price="late-check-out"></span><br><button class="btn sm" data-add="late-check-out">toevoegen →</button></div></div>
+ </div></div>
+<aside class="panel side-sum"><h2>jouw verblijf</h2><div class="sum" style="margin-top:14px"><div><span>subtotaal (<span id="s-n"></span> items)</span><span id="s-sub"></span></div><div><span>verzending</span><span id="s-ship"></span></div><div><span>korting</span><span>—</span></div><div class="tot"><span>totaal</span><span id="s-tot"></span></div></div>
+ <div class="code"><input placeholder="sleutelcode" aria-label="kortingscode"><button>toepassen</button></div>
+ <h3 style="font-size:20px">bezorging in je kamer</h3>
+ <div class="ship"><label><input type="radio" name="ship" value="std" checked><span>standaard check-in<br><small>3 – 5 werkdagen · gratis vanaf € 50,00</small></span><b>€ 4,95</b></label><label><input type="radio" name="ship" value="express"><span>express naar je kamer<br><small>1 – 2 werkdagen</small></span><b>€ 9,95</b></label></div>
+ <button class="btn" style="width:100%;justify-content:center;font-size:18px" onclick="alert('dit is een demo: afrekenen is nog niet gekoppeld.')">nu inchecken →</button>
+ <p class="small">veilig betalen met bancontact, ideal of kaart</p></aside></div>
+<div id="ftr"></div><script src="app.js"></script></body></html>
