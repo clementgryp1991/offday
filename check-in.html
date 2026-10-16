@@ -1,17 +1,38 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><title>check-in · offday</title></head><body><div id="hdr"></div>
-<section class="ci-hero"><h1>check-in</h1><p>almost ready for your offday.</p></section>
-<div class="cart"><div class="panel"><h2>your room</h2><p id="cnt"></p><div id="lines"></div>
- <div class="gift"><div class="t"><h3 id="gift-t"></h3><p id="gift-p"></p><div class="bar"><i></i></div><div class="bar-l"><span id="bar-now"></span><span data-threshold></span></div></div><img src="img/sleutel-hand.jpg" alt="room 00 key"></div>
- <h3 style="font-size:22px;margin-top:22px">something else for your room?</h3>
- <div class="ups">
-  <div class="up"><img src="img/lijn.jpg" alt=""><div><h4>reset mist</h4><span data-price="reset-mist"></span><br><button class="btn sm" data-add="reset-mist">add →</button></div></div>
-  <div class="up"><img src="img/plank.jpg" alt=""><div><h4>radiance serum</h4><span data-price="radiance-serum"></span><br><button class="btn sm" data-add="radiance-serum">add →</button></div></div>
-  <div class="up"><img src="img/koffer.jpg" alt=""><div><h4>late check-out kit</h4><span data-price="late-check-out"></span><br><button class="btn sm" data-add="late-check-out">add →</button></div></div>
- </div></div>
-<aside class="panel side-sum"><h2>your stay</h2><div class="sum" style="margin-top:14px"><div><span>subtotal (<span id="s-n"></span> items)</span><span id="s-sub"></span></div><div><span>shipping</span><span id="s-ship"></span></div><div><span>discount</span><span>—</span></div><div class="tot"><span>total</span><span id="s-tot"></span></div></div>
- <div class="code"><input placeholder="key code" aria-label="discount code"><button>apply</button></div>
- <h3 style="font-size:20px">delivery to your room</h3>
- <div class="ship"><label><input type="radio" name="ship" value="std" checked><span>standard check-in<br><small>3 – 5 business days · free from €50.00</small></span><b>€4.95</b></label><label><input type="radio" name="ship" value="express"><span>express to your room<br><small>1 – 2 business days</small></span><b>€9.95</b></label></div>
- <button class="btn" style="width:100%;justify-content:center;font-size:18px" onclick="alert('this is a demo: checkout is not connected yet.')">check in now →</button>
- <p class="small">secure payment with bancontact, ideal or card</p></aside></div>
-<div id="ftr"></div><script src="app.js"></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>check-in · offday</title><meta name="description" content="your offday bag"><meta name="theme-color" content="#173C30">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head><body class="">
+<a class="skip" href="#main">skip to content</a>
+<div class="demo">design preview · all prices are example prices · no real orders</div>
+<header class="hdr"><div class="wrap"><a class="logo" href="index.html" aria-label="offday home">offday<i>.</i></a>
+<nav class="nav" aria-label="main"><a href="index.html#rooms">the rooms</a><a href="room-service.html">room service</a><a href="index.html#ritual">the ritual</a><a href="index.html#story">our story</a><a href="index.html#club">do not disturb club</a></nav>
+<div class="hdr-r"><a class="bag" href="check-in.html" aria-label="check-in, your bag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg><span>check-in</span><b data-count>0</b></a>
+<button class="burger" aria-label="menu" aria-expanded="false"><span></span><span></span></button></div></div>
+<nav class="mnav" aria-label="mobile"><a href="index.html#rooms">the rooms</a><a href="room-service.html">room service</a><a href="index.html#ritual">the ritual</a><a href="index.html#story">our story</a><a href="index.html#club">do not disturb club</a><a href="check-in.html">check-in</a></nav></header>
+<main id="main"><div class="wrap"><span class="num" style="padding-top:2rem">check-in</span><h1 style="font-size:clamp(2.6rem,6vw,4rem);margin:.6rem 0">your stay.</h1>
+<div class="co"><div><div id="lines"></div>
+<form id="cof" style="margin-top:2rem"><h2 style="font-size:1.8rem;margin-bottom:1rem">guest details</h2>
+<div class="field"><label for="e">email</label><input id="e" type="email" required autocomplete="email"></div>
+<div class="grid2"><div class="field"><label for="fn">first name</label><input id="fn" required autocomplete="given-name"></div><div class="field"><label for="ln">last name</label><input id="ln" required autocomplete="family-name"></div></div>
+<div class="field"><label for="ad">address</label><input id="ad" required autocomplete="street-address"></div>
+<div class="grid2"><div class="field"><label for="pc">postcode</label><input id="pc" required autocomplete="postal-code"></div><div class="field"><label for="ct">city</label><input id="ct" required autocomplete="address-level2"></div></div>
+<div class="field"><label for="card">personal card message (optional)</label><textarea id="card" rows="2" maxlength="160"></textarea></div>
+<h2 style="font-size:1.8rem;margin:1rem 0 .4rem">payment</h2><div class="pay"><label><input type="radio" name="p" checked> Bancontact</label><label><input type="radio" name="p"> card</label><label><input type="radio" name="p"> Apple Pay</label><label><input type="radio" name="p"> PayPal</label></div>
+<button class="btn" style="width:100%">complete check-in (demo)</button><p class="ph-note" style="margin-top:.6rem">demo only: no payment is taken.</p></form></div>
+<aside class="summary" aria-live="polite"><h2 style="font-size:1.6rem">summary</h2><div class="gift"><span id="gt"></span><div class="bar"><i id="gb"></i></div></div>
+<div class="row"><span>subtotal</span><span id="st"></span></div><div class="row"><span>delivery</span><span id="sh"></span></div><div class="row total"><span>total</span><span id="tt"></span></div></aside></div></div>
+<script>
+function renderCart(c){const L=document.getElementById('lines');const ks=Object.keys(c).filter(k=>P[k]&&c[k]>0);
+L.innerHTML=ks.length?ks.map(k=>`<div class="line"><img src="${P[k].img}" alt=""><div><h4>${P[k].n}</h4><small>${P[k].r} · ${P[k].v}</small><div class="qty" style="width:max-content;margin-top:.4rem"><button onclick="chg('${k}',-1)" aria-label="less">−</button><span>${c[k]}</span><button onclick="chg('${k}',1)" aria-label="more">+</button></div></div><b>${eur(P[k].p*c[k])}</b></div>`).join(''):'<p class="serif" style="font-size:1.5rem;padding:2rem 0">your room is still empty. <a href="index.html#rooms">explore the rooms</a></p>';
+const t=total(c),sh=t===0||t>=SHIP_FREE?0:4.95,r=GIFT-t;document.getElementById('st').textContent=eur(t);document.getElementById('sh').textContent=sh?eur(sh):'free';document.getElementById('tt').textContent=eur(t+sh);
+document.getElementById('gt').textContent=r>0?`add ${eur(r)} more to unlock your secret copper room key.`:'your secret copper room key is included. you are officially off duty.';document.getElementById('gb').style.width=Math.min(100,t/GIFT*100)+'%'}
+function chg(k,d){const c=get();c[k]=(c[k]||0)+d;if(c[k]<=0)delete c[k];put(c)}
+document.getElementById('cof').addEventListener('submit',e=>{e.preventDefault();localStorage.removeItem('offday-wild-cart');document.querySelector('.co').innerHTML='<div style="padding:3rem 0"><h2>welcome to your offday.</h2><p style="margin-top:1rem">demo check-in complete. no payment was taken.</p><a class="btn" style="margin-top:1.5rem" href="index.html">back to the lobby</a></div>';render()});
+</script></main>
+<footer><div class="wrap"><div><a class="logo" href="index.html">offday<i>.</i></a><p style="margin-top:1rem;max-width:22rem">the wild retreat. skincare for the moment the world can wait.</p></div>
+<div><b>the hotel</b><a href="index.html#rooms">the rooms</a><a href="room-service.html">room service</a><a href="index.html#ritual">the ritual</a></div>
+<div><b>guest services</b><a href="#">delivery & returns</a><a href="#">contact the concierge</a><a href="index.html#club">do not disturb club</a></div>
+<div><b>follow</b><a href="#">instagram</a><a href="#">tiktok</a></div>
+<div class="legal">© 2026 offday · belgium · design preview, example prices, no real payments.</div></div></footer>
+</body></html>
